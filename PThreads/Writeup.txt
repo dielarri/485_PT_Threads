@@ -1,0 +1,28 @@
+Experiment 1: No Synchronization.
+Like the name suggest, there is no synchronization between the threads and iteration of all threads through the system. so its run time will differ depending on each system's capabilities.
+Experiment runs:
+x= 10, y= 1000 , results= 9000.
+x= 20, y= 9000 , results= 170147.
+x= 40, y= 17147, results= 144109.
+x= 80, y= 144109, results= 50169.
+x= 160, y= 50169, results= 807733.
+x= 566, y= 2491, results= 1407415.
+
+Experiment 2: Pthread locks.
+For this expereiment, threads are not exdcuted simultanously and is instead a program segment known as critical selection. These thread run one at a time.
+Experiemnt Runs:
+x= 10, y= 1000, results= 9.
+x= 20, y= 9000 , results= 19
+x= 40, y= 17147, results= 39.
+x= 80, y= 144109, results= 79.
+x= 160, y= 50169, results= 159.
+x= 566, y= 2491, results= 565.
+
+Experiment 3: Test and Set (TAS) locks.
+For this experiment, the threads are locked and then unlocked to run each thread in synchronization, and the results print out the count of iterations. 
+Experiment runs:
+x= 10, y= 1000, results= 10254.
+x= 40, y= 9000, results= 89095.
+x= 50, y= 90000, results= 159343.
+x= 90, y= 900000, results= 1144007.
+x= 200, y= 900000, results= 1480452.
